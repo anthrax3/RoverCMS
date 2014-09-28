@@ -1,0 +1,155 @@
+﻿@using Default.Functionality.Extensions
+@model Default.Models.Register.StepTwoModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Habblow - Step 1</title>
+    <link href="@Url.Content("/Themes/Default/Content/Stylesheets/bootstrap-water-min.css")" rel="stylesheet" />
+    <link href="@Url.Content("/Themes/Default/Content/Stylesheets/common.css")" rel="stylesheet" />
+    <link href="@Url.Content("/Themes/Default/Content/Stylesheets/register.css")" rel="stylesheet" />
+</head>
+<body id="step2">
+    <div class="oc-wrapper">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-offset-3 col-md-5">
+
+                    <div id="topProgress">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="step stepOne disabled">Birthday & Gender</div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="step stepTwo">Account Details</div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="step stepThree disabled">Security Check</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="middleContainer">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h1>Account Details</h1>
+
+                                <hr />
+
+                                @using (Html.BeginForm("Step2", "Register"))
+                                {
+                                    
+                                     if (!ViewData.ModelState.IsValid)
+                                     {
+                                         <div class="alert alert-danger alert-dismissable" role="alert">
+                                             <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                             <h4>Error!</h4>
+                                             @Html.ValidationSummary()
+                                         </div>    
+                                     }
+                                    
+                                    <div class="form-group">
+                                        @Html.BootstrapLabelFor(m => m.Username)
+                                        @Html.BootstrapTextBoxFor(m => m.Username)
+                                        @Html.BootstrapDescription("The name you'd like to use on our website and inside the hotel.")
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.BootstrapLabelFor(m => m.Email)
+                                        @Html.BootstrapTextBoxFor(m => m.Email)
+                                        @Html.BootstrapDescription("You'll need to use this email address to recover your account if you ever lose the password.")
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.BootstrapLabelFor(m => m.RepeatEmail)
+                                        @Html.BootstrapTextBoxFor(m => m.RepeatEmail)
+                                        @Html.BootstrapDescription("Re-type your previous email. These emails have to match.")
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.BootstrapLabelFor(m => m.Password)
+                                        @Html.BootstrapPasswordFor(m => m.Password)
+                                        @Html.BootstrapDescription("Create a strong password with atleast 5 characters")
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.BootstrapLabelFor(m => m.RepeatPassword)
+                                        @Html.BootstrapPasswordFor(m => m.RepeatPassword)
+                                        @Html.BootstrapDescription("Re-type your previous password, these passwords should match each other")
+                                    </div>
+
+                                    <hr />
+
+                                    <div class="checkbox">
+                                        <label>
+                                            @Html.CheckBoxFor(m => m.AcceptTerms) I agree to speak english and play nice with other players.
+                                        </label>
+                                    </div>
+
+                                    <hr class="dashed" />
+
+                                    <div id="bottom" class="clearfix">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="pull-left">
+
+                                                    <input id="back" type="submit" class="btn btn-link" value="Go back" />
+
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="pull-right">
+                                                    <input type="submit" value="Next" class="btn btn-default" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="@Url.Content("/Themes/Default/Content/Javascripts/jquery.js")"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            function genderChange(element) {
+                if ($(element).val() == "man") {
+                    $('#middleContainer .girl').removeClass('active');
+                    $('#middleContainer .boy').addClass('active');
+                    $("#middleContainer #girl input[name=Gender]").prop('checked', false);
+                    $("#middleContainer #boy input[name=Gender]").prop('checked', true);
+                } else {
+                    $('#middleContainer .boy').removeClass('active');
+                    $('#middleContainer .girl').addClass('active');
+                    $("#middleContainer #boy input[name=Gender]").prop('checked', false);
+                    $("#middleContainer #girl input[name=Gender]").prop('checked', true);
+                }
+            }
+
+            $('input[name=Gender]:radio').change(function () {
+                genderChange($(this));
+            });
+
+            $('#middleContainer .boy, #middleContainer .girl').click(function () {
+                genderChange($(this).parent().find('#Gender'));
+            });
+
+            $('#back').click(function () {
+                parent.history.back();
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>
+

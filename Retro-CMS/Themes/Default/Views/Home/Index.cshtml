@@ -1,0 +1,94 @@
+﻿
+@using Default.Functionality.Extensions
+@model Default.Models.HomeModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Habblow - Home</title>
+    <link href="@Url.Content("~/Themes/Default/Content/Stylesheets/bootstrap-water-min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Themes/Default/Content/Stylesheets/common.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Themes/Default/Content/Stylesheets/home.css")" rel="stylesheet" />
+</head>
+<body>
+    <div class="oc-wrapper">
+        <div class="container">
+            <div class="row">
+                <div id="contentContainer" class="clearfix">
+
+                    <!-- Transparant background -->
+                    <div id="outsideContainer" class="col-md-12">
+                      
+                            <!-- Inside Content -->
+                            <div id="indexContent" class="col-md-12">
+                                <div class="row">
+
+                                    <!-- Top -->
+                                    <div id="topContainer" class="col-md-12 clearfix">
+                                        <div class="pull-left">
+                                            <a href="@Url.Action("Index")"><p class="logo"></p></a>
+                                        </div>
+                                        <div class="pull-right">
+                                            <p class="online"></p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Middle Content -->
+                                    <div id="middleContainer" class="col-md-12 clearfix">
+                                        <div class="row">
+                                            <!-- Image -->
+                                            <div class="col-md-8 hidden-xs hidden-sm">
+                                                <div class="welcome"></div>
+                                            </div>
+                                            <!-- Login -->
+                                            <div class="col-md-4">
+                                                <div class="panel">
+                                                    <div class="panel-heading panel-warning">
+                                                        Inloggen op Habblow
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        @using (Html.BeginForm())
+                                                        {
+                                                            @Html.AntiForgeryToken()
+
+                                                            <div class="form-group">
+                                                                @Html.BootstrapLabelFor(m => m.Username)
+                                                                @Html.BootstrapTextBoxFor(m => m.Username)
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                @Html.BootstrapLabelFor(m => m.Password)
+                                                                @Html.BootstrapTextBoxFor(m => m.Password)
+                                                            </div>
+
+                                                            <input type="submit" value="Inloggen" class="btn btn-sm btn-default" />
+                                                        }
+                                                    </div>
+                                                </div>
+
+                                                <div id="buttonContainer">
+                                                    <div id="innerButtonContainer">
+                                                        <div id="topButton">Join us For Free</div>
+                                                        <div id="bottomButton">Become a Habblow!</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Tags -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
+

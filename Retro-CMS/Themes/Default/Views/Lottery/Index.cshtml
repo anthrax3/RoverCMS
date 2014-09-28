@@ -1,0 +1,114 @@
+﻿@using Default.Functionality.Extensions
+@model Default.Models.Lottery.LotteryModel
+
+<div id="lotterySystem" class="row">
+    <div class="col-md-7">
+
+        <!-- Vault -->
+        <div id="vault" class="box">
+            <div class="innerBox">
+                <div class="head lightblue">
+                    <p class="noMargin">Lottery</p>
+                </div>
+                <div class="body clearfix">
+                    <div id="content">
+                        <p>Are you feeling lucky today?</p>
+
+                        <div id="codes">
+                            @Html.DropDownListFor(m => m.SelectedCodeOne, Model.GetCodes(), new { @class = "form-control" })
+                            @Html.DropDownListFor(m => m.SelectedCodeTwo, Model.GetCodes(), new { @class = "form-control" })
+                            @Html.DropDownListFor(m => m.SelectedCodeThree, Model.GetCodes(), new { @class = "form-control" })
+                            @Html.DropDownListFor(m => m.SelectedCodeFour, Model.GetCodes(), new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <div id="showRoom" class="box nextBlock">
+            <div class="innerBox">
+                <div class="head lightblue">
+                    <p class="noMargin">Prizes Showroom</p>
+                </div>
+                <div class="body clearfix">
+                    <ul class="noMargin noPadding">
+                        <li class="row-fluid">
+                            <img src="@Url.Content("/Themes/Default/Content/Images/Collectables/s_shalimar_vase.gif")" alt="Collectible" class="pull-left"/>
+                            <p class="title noMargin">August 2014 : Some Item</p>
+                            <p class="description">Vestibulum purus nunc, auctor faucibus libero id, vulputate tristique est.</p>
+                        </li>
+                        <li class="row-fluid">
+                            <img src="@Url.Content("/Themes/Default/Content/Images/Collectables/s_smoke_red.gif")" alt="Collectible" class="pull-left" />
+                            <p class="title noMargin">August 2014 : Some Item</p>
+                            <p class="description">Vestibulum purus nunc, auctor faucibus libero id, vulputate tristique est.</p>
+                        </li>
+                        <li class="row-fluid">
+                            <img src="@Url.Content("/Themes/Default/Content/Images/Collectables/s_svnr_gondola.gif")" alt="Collectible" class="pull-left" />
+                            <p class="title noMargin">August 2014 : Some Item</p>
+                            <p class="description">Vestibulum purus nunc, auctor faucibus libero id, vulputate tristique est.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-5">
+        <div id="info" class="box">
+            <div class="innerBox">
+                <div class="head lightblue">
+                    <p class="noMargin">Info</p>
+                </div>
+                <div class="body clearfix">
+                    <img src="@Url.Content("~/Themes/Default/Content/Images/Lottery/habbo-lottery.gif")" alt="Lottery" class="pull-left"/>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum purus in lacus venenatis pulvinar. Ut rhoncus, dui vel mattis tristique, justo lectus elementum nulla, lobortis dapibus lacus justo sit amet sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque est massa, imperdiet nec efficitur non, finibus sed quam. Sed ut quam ac metus sodales consequat.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="myAccount" class="box nextBlock">
+            <div class="innerBox">
+                <div class="head lightblue">
+                    <p class="noMargin">Details</p>
+                </div>
+                <div class="body clearfix">
+                    <!-- Allowed attempts, Attempts, Attempts left -->
+                    <ul>
+                        <li class="clearfix">
+                            <div class="name">
+                                <img src="@Url.Content("~/Themes/Default/Content/Images/Lottery/allowed_attempts.gif")" alt="Allowed attempts"/>
+                                <span>Allowed attempts:</span>
+                            </div>
+                            <div class="value">
+                                <span>15</span>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="name">
+                                <img src="@Url.Content("~/Themes/Default/Content/Images/Lottery/attempts.gif")" alt="Tried attempts"/>
+                                <span>Attempts:</span>
+                            </div>
+                            <div class="value">
+                                <span>5</span>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="name">
+                                <img src="@Url.Content("~/Themes/Default/Content/Images/Lottery/attempts_left.gif")" alt="Attempts left"/>
+                                <span>Attempts left:</span>
+                            </div>
+                            <div class="value">
+                                <span>10</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Stylesheets{
+    <link href="@Url.Content("/Themes/Default/Content/Stylesheets/Lottery.css")" rel="stylesheet" />
+}

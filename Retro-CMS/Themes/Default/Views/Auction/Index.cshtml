@@ -1,0 +1,124 @@
+﻿@using Default.Functionality.Extensions
+@model Default.Models.Auction.AuctionBundleModel
+
+<div id="auctionContainer" class="row">
+    <div class="col-md-7">
+
+        <!-- Auction -->
+        <div id="auction" class="box">
+            <div class="innerBox">
+                <div class="head lightblue">
+                    <p class="noMargin">Auction</p>
+                </div>
+                <div class="body clearfix">
+                    <div id="furniture">
+                        <img src="@Url.Content("/Themes/Default/Content/Images/Auction/rares_thing_2_blue.gif")" alt="Furniture" />
+                    </div>
+                    <div id="info">
+                        <span>New Furniture!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="infoBidding" class="nextBlock">
+            <div class="box">
+                <div class="innerBox">
+                    <div class="head lightblue">
+                        <p class="noMargin">Bid</p>
+                    </div>
+                    <div class="body clearfix">
+                        @using (Html.BeginForm("AddBid", "Auction", FormMethod.Post, new { @class = "form-inline" }))
+                        {
+                            @Html.BootstrapLabel("Bid")
+                            @Html.BootstrapTextBoxFor(m => m.AuctionAddBidModel)
+
+                            <input type="submit" value="Add bid!" class="btn btn-default btn-xs" />
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-md-5">
+
+        <div id="infoBidding">
+            <div class="box">
+                <div class="innerBox">
+                    <div class="head lightblue">
+                        <p class="noMargin">Info</p>
+                    </div>
+                    <div class="body clearfix">
+                        <img src="@Url.Content("/Themes/Default/Content/Images/Auction/leprechaun_l.gif")" alt="Credits" class="pull-left" />
+                        <p class="noMargin">This furniture will be only on sale for a limited time and can only be sold once. Whoever has the highest bid wins the auction and get this unique piece of furniture!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="biddings" class="nextBlock">
+            <div class="box">
+                <div class="innerBox">
+                    <div class="head lightblue">
+                        <p class="noMargin">Latest Biddings</p>
+                    </div>
+                    <div class="body clearfix">
+                        <ul class="noPadding noMargin">
+                            <li>
+                                <img src="http://www.habbo.nl/habbo-imaging/avatarimage?hb=img&user=Crowley&direction=4&head_direction=3&gesture=sml&size=m" class="pull-left" />
+
+                                <div class="info">
+                                    <p class="title noMargin">James</p>
+                                    <hr />
+                                    <p class="bottom">2500 Credits | 30-NOV-2014</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="http://www.habbo.nl/habbo-imaging/avatarimage?hb=img&user=Lotus&direction=4&head_direction=3&gesture=sml&size=m" class="pull-left" />
+
+                                <div class="info">
+                                    <p class="title noMargin">James</p>
+                                    <hr />
+                                    <p class="bottom">2500 Credits | 30-NOV-2014</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="http://www.habbo.nl/habbo-imaging/avatarimage?hb=img&user=xLief&direction=4&head_direction=3&gesture=sml&size=m" class="pull-left" />
+
+                                <div class="info">
+                                    <p class="title noMargin">James</p>
+                                    <hr />
+                                    <p class="bottom">2500 Credits | 30-NOV-2014</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="http://www.habbo.nl/habbo-imaging/avatarimage?hb=img&user=SuperJam!e20&direction=4&head_direction=3&gesture=sml&size=m" class="pull-left" />
+
+                                <div class="info">
+                                    <p class="title noMargin">James</p>
+                                    <hr />
+                                    <p class="bottom">2500 Credits | 30-NOV-2014</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="http://www.habbo.nl/habbo-imaging/avatarimage?hb=img&user=Koekie&direction=4&head_direction=3&gesture=sml&size=m" class="pull-left" />
+
+                                <div class="info">
+                                    <p class="title noMargin">James</p>
+                                    <hr />
+                                    <p class="bottom">2500 Credits | 30-NOV-2014</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Stylesheets{
+    <link href="@Url.Content("/Themes/Default/Content/Stylesheets/auction.css")" rel="stylesheet" />
+}

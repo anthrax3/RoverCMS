@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Habblow - Me</title>
+    @Styles.Render("~/Themes/Default/Content/Stylesheets")
+    @RenderSection("Stylesheets", false)
+</head>
+<body>
+
+    <div class="oc-wrapper">
+
+
+        <div class="row">
+
+            @{Html.RenderPartial("Topbar"); }
+            <div class="container">
+                <div class="col-md-push-1 col-md-10">
+                    @{Html.RenderPartial("Shout"); }
+                    @{Html.RenderPartial("Header"); }
+
+
+                    <div id="pageContent" class="row">
+                        <div class="col-md-12">
+                            <div class="alert alert-success alert-dismissable alert-small nextBlock" role="alert">
+                                <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ornare elit vel felis venenatis, eu hendrerit nulla viverra.
+                            </div>
+
+                            @RenderBody()
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @Scripts.Render("~/Themes/Default/Content/Javascripts")
+    @RenderSection("Scripts", false)
+</body>
+</html>
+
+
+
+
+

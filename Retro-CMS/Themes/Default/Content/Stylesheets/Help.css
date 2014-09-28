@@ -1,0 +1,78 @@
+﻿#helpSystem #search input[type=submit] {
+    margin: 0;
+    padding: 2px 10px;
+    height: auto;
+}
+
+#helpSystem #articles ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#helpSystem #articles {
+    margin-top: 10px;
+}
+
+    #helpSystem #articles li:first-of-type {
+        margin-top: 0px;
+    }
+
+    #helpSystem #articles li:last-of-type {
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+
+    #helpSystem #articles li {
+        padding-bottom: 10px;
+        margin-top: 10px;
+        border-bottom: 1px solid #d3d3d3;
+    }
+
+        #helpSystem #articles li a {
+            background-image: url(../Images/Help/article.gif);
+            background-repeat: no-repeat;
+            padding-left: 30px;
+        }
+
+    #helpSystem #articles #loadMore {
+        margin-top: 10px;
+        display: block;
+    }
+
+#helpSystem #faq .body {
+    margin-top: -15px;
+}
+
+#helpSystem #faq .col-md-6 {
+    margin-top: 15px;
+}
+
+#helpSystem #faq .title {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+#helpSystem #faq ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#helpSystem #faq .amount {
+    color: #9B9B9B;
+    font-size: 11px;
+}
+
+#helpSystem #faq ul > li > ul > li > a {
+    background-image: url(../Images/Help/faq.gif);
+    background-repeat: no-repeat;
+    padding-left: 30px;
+    display: block;
+}
+
+#helpSystem #faq ul > li > ul > li {
+    margin-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #d3d3d3;
+}

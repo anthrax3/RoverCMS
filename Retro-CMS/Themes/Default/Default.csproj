@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{30A60E16-DD00-46C7-9465-C793D9F30D83}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Default</RootNamespace>
+    <AssemblyName>Default</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\..\..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper, Version=3.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4, Version=3.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="BotDetect, Version=3.0.16.0, Culture=neutral, PublicKeyToken=74616036388b765f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\packages\Captcha.3.0.16.0\lib\net45\BotDetect.dll</HintPath>
+    </Reference>
+    <Reference Include="BotDetect.Web.UI.Mvc, Version=3.0.16.0, Culture=neutral, PublicKeyToken=74616036388b765f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\packages\Captcha.3.0.16.0\lib\net45\BotDetect.Web.UI.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.AspNet">
+      <HintPath>..\..\References\Glimpse.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.Core">
+      <HintPath>..\..\References\Glimpse.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.Mvc4">
+      <HintPath>..\..\References\Glimpse.Mvc4.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebGrease">
+      <HintPath>..\..\..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AuctionController.cs" />
+    <Compile Include="Controllers\CollectiblesController.cs" />
+    <Compile Include="Controllers\Help.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LotteryController.cs" />
+    <Compile Include="Controllers\MeController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Controllers\RegisterController.cs" />
+    <Compile Include="Functionality\Extensions\Bootstrap.cs" />
+    <Compile Include="GlimpseSecurityPolicy.cs" />
+    <Compile Include="Models\Auction\AuctionAddBidModel.cs" />
+    <Compile Include="Models\Auction\AuctionBundleModel.cs" />
+    <Compile Include="Models\Help\BundleHelpModel.cs" />
+    <Compile Include="Models\Help\HelpArticleModel.cs" />
+    <Compile Include="Models\Help\HelpCategoryModel.cs" />
+    <Compile Include="Models\Help\SearchHelpModel.cs" />
+    <Compile Include="Models\HomeModel.cs" />
+    <Compile Include="Models\Lottery\LotteryModel.cs" />
+    <Compile Include="Models\Me\AddTagModel.cs" />
+    <Compile Include="Models\Me\MeBundleModel.cs" />
+    <Compile Include="Models\News\ArticleModel.cs" />
+    <Compile Include="Models\News\BundleNewsModel.cs" />
+    <Compile Include="Models\News\CommentModel.cs" />
+    <Compile Include="Models\News\WriteCommentModel.cs" />
+    <Compile Include="Models\Register\StepOneModel.cs" />
+    <Compile Include="Models\Register\StepTwoModel.cs" />
+    <Compile Include="Startup\BundleConfig.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup\RouteConfig.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\Images\Auction\auction.png" />
+    <Content Include="Content\Images\Auction\leprechaun_l.gif" />
+    <Content Include="Content\Images\Auction\rares_thing_2_blue.gif" />
+    <Content Include="Content\Images\Collectables\bg_around.png" />
+    <Content Include="Content\Images\Collectables\chart.png" />
+    <Content Include="Content\Images\Collectables\gondolapng.png" />
+    <Content Include="Content\Images\Collectables\instructions.png" />
+    <Content Include="Content\Images\Collectables\s_dragon_green.gif" />
+    <Content Include="Content\Images\Collectables\s_shalimar_vase.gif" />
+    <Content Include="Content\Images\Collectables\s_smoke_red.gif" />
+    <Content Include="Content\Images\Collectables\s_svnr_gondola.gif" />
+    <Content Include="Content\Images\Collectables\ukplane.png" />
+    <Content Include="Content\Images\Common\Bars\blue-bar.png" />
+    <Content Include="Content\Images\Common\Bars\lightblue-bar.png" />
+    <Content Include="Content\Images\Common\bg.png" />
+    <Content Include="Content\Images\Common\Header\header-background.png" />
+    <Content Include="Content\Images\Common\Icons\credit.png" />
+    <Content Include="Content\Images\Common\Icons\flashy_arrow.gif" />
+    <Content Include="Content\Images\Common\Icons\offline.gif" />
+    <Content Include="Content\Images\Common\Icons\online.gif" />
+    <Content Include="Content\Images\Common\Icons\pixel.png" />
+    <Content Include="Content\Images\Common\Icons\remove.gif" />
+    <Content Include="Content\Images\Common\Icons\Shout.gif" />
+    <Content Include="Content\Images\Common\Icons\users-online.gif" />
+    <Content Include="Content\Images\Common\Icons\users.png" />
+    <Content Include="Content\Images\Common\Main\enter_button.png" />
+    <Content Include="Content\Images\Common\Main\main_banner.png" />
+    <Content Include="Content\Images\glassEffect.png" />
+    <Content Include="Content\Images\Help\article.gif" />
+    <Content Include="Content\Images\Help\faq.gif" />
+    <Content Include="Content\Images\Home\bg.png" />
+    <Content Include="Content\Images\Home\HABBOHOTEL.png" />
+    <Content Include="Content\Images\Home\Register.png" />
+    <Content Include="Content\Images\Home\register2.png" />
+    <Content Include="Content\Images\logo.gif" />
+    <Content Include="Content\Images\Lottery\allowed_attempts.gif" />
+    <Content Include="Content\Images\Lottery\attempts.gif" />
+    <Content Include="Content\Images\Lottery\attempts_left.gif" />
+    <Content Include="Content\Images\Lottery\habbo-lottery.gif" />
+    <Content Include="Content\Images\Lottery\vaultbg.png" />
+    <Content Include="Content\Images\Me\Articles\TopStory_carnaval_300x187.png" />
+    <Content Include="Content\Images\Me\Articles\topstory_habbo_beta.gif" />
+    <Content Include="Content\Images\Me\Articles\topStory_PromoftheDead_red.gif" />
+    <Content Include="Content\Images\Me\Articles\topStory_sandCastle.gif" />
+    <Content Include="Content\Images\Me\Articles\TS_newsflash.png" />
+    <Content Include="Content\Images\Me\Articles\ts_newyear_2009.gif" />
+    <Content Include="Content\Images\Me\Badges\ADM.gif" />
+    <Content Include="Content\Images\Me\Badges\BTB.gif" />
+    <Content Include="Content\Images\Me\Badges\FI1.gif" />
+    <Content Include="Content\Images\Me\Badges\NL035.gif" />
+    <Content Include="Content\Images\Me\Badges\SG3.gif" />
+    <Content Include="Content\Images\Me\Badges\VIP.gif" />
+    <Content Include="Content\Images\Me\Badges\Z40.gif" />
+    <Content Include="Content\Images\Me\Campaings\exclusive.gif" />
+    <Content Include="Content\Images\Me\Campaings\fb.png" />
+    <Content Include="Content\Images\Me\hotelview.png" />
+    <Content Include="Content\Images\Me\info_habbo_plate.png" />
+    <Content Include="Content\Images\Register\chosen_boy.png" />
+    <Content Include="Content\Images\Register\chosen_girl.png" />
+    <Content Include="Content\Images\Register\female.png" />
+    <Content Include="Content\Images\Register\male.png" />
+    <Content Include="Content\Images\Register\registration_step1.png" />
+    <Content Include="Content\Images\Register\registration_step2.png" />
+    <Content Include="Content\Images\Register\silhouette_boy.png" />
+    <Content Include="Content\Images\Register\silhouette_girl.png" />
+    <Content Include="Content\Images\Register\step_1_white.png" />
+    <Content Include="Content\Images\Register\step_2_white.png" />
+    <Content Include="Content\Images\Register\step_3_white.png" />
+    <Content Include="Content\Javascripts\bootstrap.min.js" />
+    <Content Include="Content\Javascripts\jquery-1.7.1.min.js" />
+    <Content Include="Content\Javascripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Content\Javascripts\jquery.js" />
+    <Content Include="Content\Javascripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Content\Javascripts\jquery.validate.min.js" />
+    <Content Include="Content\Javascripts\_references.js" />
+    <Content Include="Content\Stylesheets\auction.css" />
+    <Content Include="Content\Stylesheets\bootstrap-water-min.css" />
+    <Content Include="Content\Stylesheets\Collectibles.css" />
+    <Content Include="Content\Stylesheets\Common.css" />
+    <Content Include="Content\Stylesheets\Help.css" />
+    <Content Include="Content\Stylesheets\Home.css" />
+    <Content Include="Content\Stylesheets\Lottery.css" />
+    <Content Include="Content\Stylesheets\Me.css" />
+    <Content Include="Content\Stylesheets\News.css" />
+    <Content Include="Content\Stylesheets\Register.css" />
+    <None Include="app.config" />
+    <None Include="Content\Fonts\fontawesome-webfont.eot" />
+    <None Include="Content\Fonts\fontawesome-webfont.ttf" />
+    <None Include="Content\Fonts\fontawesome-webfont.woff" />
+    <None Include="Content\Fonts\FontAwesome.otf" />
+    <None Include="Content\Fonts\volterb.ttf" />
+    <None Include="Content\Javascripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Content\Javascripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Content\Javascripts\modernizr-2.5.3.js" />
+    <None Include="packages.config" />
+    <None Include="Views\Collectibles\Index.cshtml" />
+    <None Include="Views\Help\Index.cshtml" />
+    <None Include="Views\News\Index.cshtml" />
+    <None Include="Views\Lottery\Index.cshtml" />
+    <None Include="Views\Home\Index.cshtml" />
+    <None Include="Views\Auction\Index.cshtml" />
+    <None Include="Views\Me\Index.cshtml" />
+    <None Include="Views\Register\Step3.cshtml" />
+    <None Include="Views\Register\Step2.cshtml" />
+    <None Include="Views\Register\Index.cshtml" />
+    <None Include="Views\Shared\Header.cshtml" />
+    <None Include="Views\Shared\Shout.cshtml" />
+    <None Include="Views\Shared\Topbar.cshtml" />
+    <None Include="Views\Shared\_Layout.cshtml" />
+    <None Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Languages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Common.csproj">
+      <Project>{d365bcde-8e98-41c5-9ead-80063d9826f1}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Retro-CMS.csproj">
+      <Project>{616e4082-871d-4f9c-8a31-bcb559dad6d3}</Project>
+      <Name>Retro-CMS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\..\..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets" Condition="Exists('..\..\..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

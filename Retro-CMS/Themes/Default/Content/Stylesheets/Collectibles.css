@@ -1,0 +1,73 @@
+﻿#collectiblesContainer #currentCollectable .body {
+    background-image: url(../Images/Collectables/bg_around.png);
+    background-repeat: no-repeat;
+    height: 345px;
+    background-size: 100% 100%;
+    position: relative;
+    color: #ececec;
+}
+#collectiblesContainer #currentCollectable #furniture {
+    position: absolute;
+    right: 15%;
+    top: 18%;
+}
+#collectiblesContainer #contentFurniture {
+    position: relative;
+    top: 55%;
+    left: 2%;
+    width: 90%;
+}
+#collectiblesContainer #currentCollectable .name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#collectiblesContainer #currentCollectable .date {
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+#collectiblesContainer #currentCollectable .description {
+    font-size: 11px;
+    margin-top: 15px;
+}
+
+#collectiblesContainer #currentCollectable a {
+    font-size: 12px;
+    line-height: 1.644;
+    border-radius: 3px;
+}
+
+#collectiblesContainer #instructions .body img {
+    margin-left: 10px;
+}
+
+#collectiblesContainer #investCollectables #worthMore {
+    margin-top: 10px;
+}
+
+#collectiblesContainer #investCollectables #worthMore img {
+    margin-right: 5px;
+}
+
+#collectiblesContainer #investCollectables #chart {
+    margin-top: 5px;
+}
+#collectiblesContainer #showRoom ul {
+    list-style: none;
+}
+#collectiblesContainer #showRoom li {
+    margin-top: 2px;
+}
+#collectiblesContainer #showRoom li:first-of-type {
+    margin-top: 0;
+}
+#collectiblesContainer #showRoom li img {
+    margin-right: 10px;
+}
+#collectiblesContainer #showRoom li  .title {
+    font-weight: bold;
+}
+#collectiblesContainer #showRoom li .description {
+    margin-top: 2px;
+}

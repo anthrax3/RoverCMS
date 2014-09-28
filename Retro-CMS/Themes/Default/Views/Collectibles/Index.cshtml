@@ -1,0 +1,103 @@
+﻿@using Default.Functionality.Extensions
+@model Default.Models.Auction.AuctionBundleModel
+
+<div id="collectiblesContainer" class="row">
+    <div class="col-md-7">
+
+        <!-- Current Collectible -->
+        <div id="currentCollectable" class="box">
+            <div class="innerBox">
+                <div class="head lightblue">
+                    <p class="noMargin">Current Collectable</p>
+                </div>
+                <div class="body clearfix">
+                    <div id="furniture">
+                        <img src="@Url.Content("/Themes/Default/Content/Images/Collectables/gondolapng.png")" alt="Collectible" />
+                    </div>
+                    <div id="contentFurniture">
+                        <p class="name noMargin">Gondola</p>
+                        <p class="date">August 2014</p>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed scelerisque nisi quis elit posuere posuere.</p>
+
+                        @Html.ActionLink("Purchase", "BuyCollectable", "Collectibles", null, new { @class = "btn btn-xs btn-default pull-right" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Showroom -->
+        <div id="showRoom" class="box nextBlock">
+            <div class="innerBox">
+                <div class="head lightblue">
+                    <p class="noMargin">Collectable Showroom</p>
+                </div>
+                <div class="body clearfix">
+                    <ul class="noMargin noPadding">
+                        <li class="row-fluid">
+                            <img src="@Url.Content("/Themes/Default/Content/Images/Collectables/s_shalimar_vase.gif")" alt="Collectible" class="pull-left"/>
+                            <p class="title noMargin">August 2014 : Some Item</p>
+                            <p class="description">Vestibulum purus nunc, auctor faucibus libero id, vulputate tristique est.</p>
+                        </li>
+                        <li class="row-fluid">
+                            <img src="@Url.Content("/Themes/Default/Content/Images/Collectables/s_smoke_red.gif")" alt="Collectible" class="pull-left" />
+                            <p class="title noMargin">August 2014 : Some Item</p>
+                            <p class="description">Vestibulum purus nunc, auctor faucibus libero id, vulputate tristique est.</p>
+                        </li>
+                        <li class="row-fluid">
+                            <img src="@Url.Content("/Themes/Default/Content/Images/Collectables/s_svnr_gondola.gif")" alt="Collectible" class="pull-left" />
+                            <p class="title noMargin">August 2014 : Some Item</p>
+                            <p class="description">Vestibulum purus nunc, auctor faucibus libero id, vulputate tristique est.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-md-5">
+
+        <!-- Instructions -->
+        <div id="instructions">
+            <div class="box">
+                <div class="innerBox">
+                    <div class="head lightblue">
+                        <p class="noMargin">What are Collectables?</p>
+                    </div>
+                    <div class="body clearfix">
+                        <img src="@Url.Content("/Themes/Default/Content/Images/Collectables/instructions.png")" alt="Instructions" class="pull-right" />
+                        <p class="noMargin">Collectables are special furniture sold only for a limited and set period of time. Experienced Habblows would know them as rares. They always cost 25 Credits.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Invest -->
+        <div id="investCollectables" class="nextBlock">
+            <div class="box">
+                <div class="innerBox">
+                    <div class="head lightblue">
+                        <p class="noMargin">Invest in Collectables</p>
+                    </div>
+                    <div class="body clearfix">
+                        <p>Collect your way to the riches!</p>
+                        <img src="@Url.Content("/Themes/Default/Content/Images/Collectables/ukplane.png")" alt="Plane" class="pull-right" />
+                        <p class="noMargin">Collectables not only make a great piece of Furni but also come with an amazing trade value. As collectables will never be sold again (that's a promise), the value will keep increase in time.</p>
+
+
+                        <div id="worthMore">
+                            <img src="@Url.Content("/Themes/Default/Content/Images/Collectables/s_dragon_green.gif")" alt="Dragon" class="pull-left" />
+                            <p class="noMargin"><strong>Elf Green Dragon Lamp</strong></p>
+                            <p>has been sold in many countries as a collectable and is now worth a lot more than what it originally cost.</p>
+                        </div>
+
+                        <img src="@Url.Content("/Themes/Default/Content/Images/Collectables/chart.png")" alt="Chart" id="chart" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Stylesheets{
+    <link href="@Url.Content("/Themes/Default/Content/Stylesheets/Collectibles.css")" rel="stylesheet" />
+}

@@ -1,0 +1,201 @@
+﻿#meContainer #infoAccount #hotelView {
+    background-image: url(../Images/Me/hotelview.png);
+    background-size: 100% 100%;
+    height: 143px;
+}
+
+#meContainer #infoAccount {
+    position: relative;
+}
+
+    #meContainer #infoAccount #bottomGrey {
+        height: 60px;
+        width: 100%;
+        background-color: #7B7B71;
+        border-bottom: thin gray dotted;
+        border-bottom: 2px solid #ADADAD;
+    }
+
+    #meContainer #infoAccount #avatarContent {
+        position: absolute;
+        top: 52px;
+        left: 22px;
+    }
+
+     #meContainer #infoAccount #avatarContent img {
+         margin-left: 14px;
+         margin-top: 2px;
+    }
+
+        #meContainer #infoAccount #avatarContent #avatarPlate {
+            background: url(../Images/Me/info_habbo_plate.png) no-repeat 2px -162px;
+            height: 138px;
+            width: 96px;
+            left: 15px;
+        }
+
+        #meContainer #infoAccount #missionContent {
+            position: absolute;
+            background-color: #fff;
+            border: 1px solid #696961;
+            padding: 3px 5px;
+            font-size: 11px;
+            border-radius: 6px;
+            bottom: 30px;
+            width: 70%;
+            max-width: 72%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            right: 6px;
+            white-space: nowrap;
+        }
+
+        /* Campaigns */
+        #campaigns .body .campaing {
+            margin-top: 10px;
+            border-bottom: 1px solid #D0D0D0;
+            padding-bottom: 10px;
+        }
+
+         #campaigns .body .campaing:last-of-type {
+             border-bottom: 0;
+             padding-bottom: 0;
+        }
+
+         #campaigns .body .campaing:first-of-type {
+             margin-top: 0;
+        }
+        #campaigns .body .campaing .title {
+            font-weight: bold;
+        }
+        #campaigns .body .campaing p {
+            margin-bottom: 2px;
+        }
+        #campaigns .body .campaing a {
+            text-decoration: underline;
+            color: #000;
+            float: right;
+        }
+        #campaigns .body .campaing .image {
+            margin-right: 10px;
+        }
+
+        /* Online Friends */
+        #onlineFriends .col-md-6 {
+            overflow: hidden;
+        }
+        #onlineFriends .col-md-6 img {
+            margin-right: 10px;
+            position: relative;
+            bottom: 22px;
+            left: -12px;
+        }
+        #onlineFriends .col-md-12 .pagination {
+            margin: 0;
+        }
+        #onlineFriends .col-md-6 .info .title {
+            font-weight: bold;
+        }
+        #onlineFriends .col-md-6 .description {
+            font-size: 11px;
+            font-style: italic;
+        }
+
+        /* Tags */
+        #tags ul {
+            list-style: none;
+        }
+        #tags li > .icon-remove {
+            margin-right: 4px;
+            position: relative;
+            top: 1px;
+        }
+        #tags li{
+            float: left;
+            margin-right: 4px;   
+        }
+        #tags li:last-of-type {
+            margin-right: 0;
+        }
+
+        /* News */
+        #news {
+            min-width: 300px;
+        }
+        #news #newsSlider {
+            position: relative;
+            color: #fff;
+            height: 189px;
+            min-height: 189px;
+        }
+
+        #news #newsSlider img {
+            position: absolute;
+            border-top-right-radius: 6px;
+            border-top-left-radius: 6px;
+            width: 100%;
+        }
+
+        #news #newsSlider .content {
+            position: relative;
+            padding: 10px;
+        }
+
+        #news #newsSlider .content p, #news #newsSlider .content a {
+            position: relative;
+        }
+
+        #news #newsSlider .latestNews {
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+        #news #newsSlider .title {
+            font-weight: bold;
+            font-size: 17px;
+        }
+        #news #newsSlider .description {
+            font-size: 10px;
+        }
+        #news #newsSlider a {
+            text-decoration: underline;
+            font-size: 10px;
+            color: #fff;
+        }
+
+         #news #articles p {
+             font-size: 10px;
+         }
+
+        #news #articles .date {
+            color: #d0d0d0;
+            font-size: 9px;
+        }
+
+        #news #articles ul {
+            border: 1px solid #D0D0D0;
+            border-top: 0;
+            list-style: none;
+        }
+
+        #news #articles li {
+            padding: 4px 10px 4px 10px;
+        }
+
+        #news #articles li:nth-child(even) {
+            background-color: #ECECEC;
+        }
+
+         #news #articles li:nth-child(odd) {
+            background-color: #FFFFFF;
+        }
+
+         /* Badges */
+         #badges #badgesContent {
+             margin-left: -5px;
+             margin-right: -5px;
+         }
+         #badges #badgesContent .item-badge img {
+             float: left;
+             width: 50px;
+             height: auto;
+         }

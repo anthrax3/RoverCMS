@@ -1,0 +1,226 @@
+﻿@using Default.Functionality.Extensions
+@model Default.Models.Me.MeBundleModel
+
+<div id="meContainer" class="row">
+    <div class="col-md-7">
+
+        <!-- Hotel View -->
+        <div id="infoAccount">
+            <div id="hotelView"></div>
+            <div id="bottomGrey"></div>
+            <div id="avatarContent">
+                <div id="avatarPlate">
+                    <img src="http://www.habbo.nl/habbo-imaging/avatarimage?figure=-&amp;head_direction=2&amp;direction=2&amp;gesture=sml" alt="James">
+                </div>
+            </div>
+            <div id="missionContent">
+                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis massa id porttitor viverra.</span>
+            </div>
+        </div>
+
+        <!-- Campaigns -->
+        <div id="campaigns" class="box nextBlock">
+            <div class="innerBox">
+                <div class="head lightblue">
+                    <p class="noMargin">Exclusive Campaigns</p>
+                </div>
+                <div class="body clearfix">
+
+                    <div class="campaing row-fluid">
+                        <div class="pull-left image">
+                            <img src="@Url.Content("/Themes/Default/Content/Images/Me/Campaings/exclusive.gif")" alt="Exclusive" />
+                        </div>
+                        <div class="info">
+                            <p class="title">Welcome to Habblow Hotel!</p>
+                            <p>Aenean rutrum odio a rhoncus ultricies. Nulla ut dapibus diam, at dignissim dolor.</p>
+                            @Html.ActionLink("More Information »", "Index")
+                        </div>
+                    </div>
+
+                    <div class="campaing row-fluid">
+                        <div class="pull-left image">
+                            <img src="@Url.Content("/Themes/Default/Content/Images/Me/Campaings/fb.png")" alt="Facebook" />
+                        </div>
+                        <div class="info">
+                            <p class="title">Get the latest news!</p>
+                            <p>Phasellus sed libero eget nisl malesuada aliquet. Aenean feugiat turpis in nunc.</p>
+                            @Html.ActionLink("More Information »", "Index")
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Friends Online -->
+        <div id="onlineFriends" class="box nextBlock">
+            <div class="innerBox">
+                <div class="head lightblue">
+                    <p class="noMargin">Online Friends</p>
+                </div>
+                <div class="body clearfix">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="pull-left">
+                                <img src="http://www.habbo.nl/habbo-imaging/avatarimage?hb=img&user=Crowley&direction=4&head_direction=3&gesture=sml&size=m" alt="Crowley" />
+                            </div>
+                            <div class="info">
+                                <p class="title">James</p>
+                                <p class="description noMargin">Suspendisse dui orci, rutrum et orci mollis</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="pull-left">
+                                <img src="http://www.habbo.nl/habbo-imaging/avatarimage?hb=img&user=Test&direction=4&head_direction=3&gesture=sml&size=m" alt="Crowley" />
+                            </div>
+                            <div class="info">
+                                <p class="title">Jamie</p>
+                                <p class="description noMargin">Suspendisse dui orci, rutrum et orci mollis</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="pull-left">
+                                <img src="http://www.habbo.nl/habbo-imaging/avatarimage?hb=img&user=Lotus&direction=4&head_direction=3&gesture=sml&size=m" alt="Crowley" />
+                            </div>
+                            <div class="info">
+                                <p class="title">Lotus</p>
+                                <p class="description noMargin">Suspendisse dui orci, rutrum et orci mollis</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="pull-left">
+                                <img src="http://www.habbo.nl/habbo-imaging/avatarimage?hb=img&user=KoekjesMonster&direction=4&head_direction=3&gesture=sml&size=m" alt="Crowley" />
+                            </div>
+                            <div class="info">
+                                <p class="title">Cookiemonster</p>
+                                <p class="description noMargin">Suspendisse dui orci, rutrum et orci mollis</p>
+                            </div>
+                        </div>
+                        <div class="col-md-12 clearfix">
+                            <div class="pull-right">
+                                <ul class="pagination">
+                                    <li><a href="#">«</a></li>
+                                    <li><a href="#">»</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-5">
+        <div id="news" class="clearfix">
+            
+            <div id="newsSlider" class="row-fluid">
+                <img src="@Url.Content("/Themes/Default/Content/Images/Me/Articles/TopStory_carnaval_300x187.png")" alt="Article" title="Article"/>
+                <div class="content">
+                    <p class="latestNews">Latest News</p>
+                    <p class="title">We are back online!</p>
+                    <p class="description">Aenean vel metus eu nisi viverra tincidunt. Vivamus massa sapien.</p>
+                    @Html.ActionLink("Read more »", "Article", "News")
+                </div>
+            </div>
+
+            <div id="articles" class="row-fluid">
+                <ul class="noMargin noPadding">
+                    <li>
+                        <p>Aliquam scelerisque tellus augue »</p>
+                        <p class="date noMargin">11-Nov-2014</p>
+                    </li>
+                    <li>
+                        <p>Aliquam scelerisque tellus augue »</p>
+                        <p class="date noMargin">11-Nov-2014</p>
+                    </li>
+                    <li>
+                        <p>Aliquam scelerisque tellus augue »</p>
+                        <p class="date noMargin">11-Nov-2014</p>
+                    </li>
+                    <li>
+                        <p>Aliquam scelerisque tellus augue »</p>
+                        <p class="date noMargin">11-Nov-2014</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Badges -->
+        <div id="badges" class="box nextBlock">
+            <div class="innerBox">
+                <div class="head lightblue">
+                    <p class="noMargin">My Badges</p>
+                </div>
+                <div class="body clearfix">
+                    <div id="badgesContent" class="clearfix">
+                        <div class="item-badge">
+                            <img src="@Url.Content("/Themes/Default/Content/Images/Me/Badges/ADM.gif")" alt="Badge" />
+                        </div>
+                        <div class="item-badge">
+                            <img src="@Url.Content("/Themes/Default/Content/Images/Me/Badges/BTB.gif")" alt="Badge" />
+                        </div>
+                        <div class="item-badge">
+                            <img src="@Url.Content("/Themes/Default/Content/Images/Me/Badges/FI1.gif")" alt="Badge" />
+                        </div>
+                        <div class="item-badge">
+                            <img src="@Url.Content("/Themes/Default/Content/Images/Me/Badges/NL035.gif")" alt="Badge" />
+                        </div>
+                        <div class="item-badge">
+                            <img src="@Url.Content("/Themes/Default/Content/Images/Me/Badges/VIP.gif")" alt="Badge" />
+                        </div>
+                        <div class="item-badge">
+                            <img src="@Url.Content("/Themes/Default/Content/Images/Me/Badges/SG3.gif")" alt="Badge" />
+                        </div>
+                        <div class="item-badge">
+                            <img src="@Url.Content("/Themes/Default/Content/Images/Me/Badges/Z40.gif")" alt="Badge" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tags -->
+        <div id="tags" class="box nextBlock">
+            <div class="innerBox">
+                <div class="head lightblue">
+                    <p class="noMargin">Tags</p>
+                </div>
+                <div class="body clearfix">
+                    <p>Add the tags that describe you or something like your hobbies!</p>
+
+                    <hr />
+
+                    <ul class="noMargin noPadding clearfix">
+                        <li><span class="icon-remove"></span>Bobba</li>
+                        <li><span class="icon-remove"></span>Test</li>
+                        <li><span class="icon-remove"></span>Cookie</li>
+                        <li><span class="icon-remove"></span>Habblow</li>
+                        <li><span class="icon-remove"></span>Fun</li>
+                        <li><span class="icon-remove"></span>Rover</li>
+                        <li><span class="icon-remove"></span>Image</li>
+                        <li><span class="icon-remove"></span>Chrome</li>
+                    </ul>
+
+                    <hr />
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            @using (Html.BeginForm("Me", "AddTag"))
+                            {
+                                @Html.BootstrapLabelFor(m => m.AddTagModel.Tag)
+                                @Html.BootstrapTextBoxFor(m => m.AddTagModel.Tag)
+
+                                <input type="submit" value="Add tag" class="btn btn-default btn-xs smallSpace" />
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Stylesheets{
+    <link href="@Url.Content("/Themes/Default/Content/Stylesheets/me.css")" rel="stylesheet" />
+}

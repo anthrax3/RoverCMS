@@ -1,0 +1,166 @@
+﻿@model Default.Models.News.BundleNewsModel
+
+<div id="newsSystem" class="row">
+    <div class="col-md-3">
+
+        <!-- Articles -->
+        <div id="articles" class="box">
+            <div class="innerBox">
+                <div class="head lightblue">
+                    <p class="noMargin">Articles</p>
+                </div>
+                <div class="body clearfix">
+                    <ul>
+                        <li class="active">
+                            @Html.ActionLink("Duis diam purus, molestie  »", "Article", "News")
+                        </li>
+                        <li>
+                            @Html.ActionLink("Mauris eget eros »", "Article", "News")
+                        </li>
+                        <li>
+                            @Html.ActionLink("Donec sem risus »", "Article", "News")
+                        </li>
+                        <li>
+                            @Html.ActionLink("Class aptent taciti sociosqu »", "Article", "News")
+                        </li>
+                        <li>
+                            @Html.ActionLink("Praesent blandit at dui id ornare »", "Article", "News")
+                        </li>
+                        <li>
+                            @Html.ActionLink("tincidunt lacus interdum »", "Article", "News")
+                        </li>
+                    </ul>
+                    @Html.ActionLink("More news »", "More", "News", new { @id = "moreNews" })
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-9">
+
+        <!-- News Article -->
+        <div id="newsArticle" class="box">
+            <div class="innerBox">
+                <div class="head lightblue">
+                    <p class="noMargin">My amazing news article!</p>
+                </div>
+                <div class="body clearfix">
+                    <p id="smallDetails">
+                        <span class="date">Posted: 28 September 2014</span>
+                        <span class="tags">Koekje, Aardappel, Reetveter</span>
+                    </p>
+
+                    <p id="article">
+                        <strong>Curabitur</strong> mi lectus, tristique nec nulla at, mollis molestie dolor. Pellentesque habitant morbi tristique senectus <i>et netus</i> et malesuada fames ac turpis egestas. Ut sit amet ligula in sem mattis cursus iaculis et urna. Curabitur ligula purus, finibus scelerisque nunc in, vehicula viverra risus. Quisque viverra felis a tempus vestibulum. Class aptent <mark>taciti sociosqu</mark> ad litora torquent per conubia nostra, per inceptos himenaeos. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris dui lectus, molestie sed libero et, posuere egestas leo. <mark>Integer</mark> porta ultricies porttitor. Sed aliquam orci eget interdum aliquam. Nunc a eros turpis. Nullam vulputate eleifend tortor, nec vehicula neque lacinia id. Etiam consectetur venenatis efficitur.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="writeComment" class="well well-sm nextBlock">
+            @using (Html.BeginForm())
+            {
+                @Html.LabelFor(m => m.WriteComment.Comment)
+                @Html.TextAreaFor(m => m.WriteComment.Comment, new { @class = "form-control" })
+
+                <input type="submit" class="btn btn-primary btn-sm" value="Post comment"/>
+            }
+        </div>
+
+        <div id="comments" class="box">
+            <div class="innerBox">
+                <div class="head lightblue">
+                    <p class="noMargin">Comments (4)</p>
+                </div>
+                <div class="body clearfix">
+                    <ul>
+                        <li class="clearfix">
+                            <div class="col-md-2">
+                                <img src="http://www.habbo.nl/habbo-imaging/avatarimage?hb=img&user=xLief&direction=4&head_direction=3&gesture=sml&size=m" class="pull-left" />
+                            </div>
+
+                            <div class="info col-md-10">
+                                <div class="userInfo">
+                                    <p class="username">James</p>
+                                    <p class="motto">This is an example motto!</p>
+                                </div>
+                                <div class="comment">
+                                    Donec eget efficitur quam. Curabitur ornare lectus tincidunt lacus interdum, at convallis purus elementum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                                </div>
+
+                                <div class="postedDate">
+                                    <p>Posted on: 28 September 2014</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="clearfix">
+                            <div class="col-md-2">
+                                <img src="http://www.habbo.nl/habbo-imaging/avatarimage?hb=img&user=Crowley&direction=4&head_direction=3&gesture=sml&size=m" class="pull-left" />
+                            </div>
+
+                            <div class="info col-md-10">
+                                <div class="userInfo">
+                                    <p class="username">Bobby</p>
+                                    <p class="motto">This is an example motto!</p>
+                                </div>
+                                <div class="comment">
+                                    Donec eget efficitur quam. Curabitur ornare lectus tincidunt lacus interdum, at convallis purus elementum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                                </div>
+
+                                <div class="postedDate">
+                                    <p>Posted on: 28 September 2014</p>
+                                </div>
+                            </div>
+                        </li>
+                         <li class="clearfix">
+                            <div class="col-md-2">
+                                <img src="http://www.habbo.nl/habbo-imaging/avatarimage?hb=img&user=xLief&direction=4&head_direction=3&gesture=sml&size=m" class="pull-left" />
+                            </div>
+
+                            <div class="info col-md-10">
+                                <div class="userInfo">
+                                    <p class="username">James</p>
+                                    <p class="motto">This is an example motto!</p>
+                                </div>
+                                <div class="comment">
+                                    Donec eget efficitur quam. Curabitur ornare lectus tincidunt lacus interdum, at convallis purus elementum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                                </div>
+
+                                <div class="postedDate">
+                                    <p>Posted on: 28 September 2014</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="clearfix">
+                            <div class="col-md-2">
+                                <img src="http://www.habbo.nl/habbo-imaging/avatarimage?hb=img&user=Crowley&direction=4&head_direction=3&gesture=sml&size=m" class="pull-left" />
+                            </div>
+
+                            <div class="info col-md-10">
+                                <div class="userInfo">
+                                    <p class="username">Bobby</p>
+                                    <p class="motto">This is an example motto!</p>
+                                </div>
+                                <div class="comment">
+                                    Donec eget efficitur quam. Curabitur ornare lectus tincidunt lacus interdum, at convallis purus elementum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                                </div>
+
+                                <div class="postedDate">
+                                    <p>Posted on: 28 September 2014</p>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Stylesheets{
+    <link href="@Url.Content("/Themes/Default/Content/Stylesheets/News.css")" rel="stylesheet" />
+}

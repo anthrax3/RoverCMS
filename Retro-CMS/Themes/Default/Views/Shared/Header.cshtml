@@ -1,0 +1,31 @@
+﻿<div id="header" class="nextBlock">
+    <div class="row">
+        <div id="main">
+            <div id="enterClient">
+               <a href="@Url.Action("Client")">Enter Hotel! <span class="icon-arrow"></span></a>
+                <span class="endButton"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="parentNavigation" class="bar-blue">
+                    <ul>
+                        <li>@Html.ActionLink("James", "Account", "Index")</li>
+                        <li>@Html.ActionLink("Community", "Community", "Index")</li>
+                        <li>@Html.ActionLink("Store", "Store", "Index")</li>
+                        <li>@Html.ActionLink("Store", "Store", "Index")</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div id="subNavigation" class="clearfix">
+                    <ul>
+                        <li class="active">@Html.ActionLink("Home", "Index", "Me")</li>
+                        <li>@Html.ActionLink("Account", "Account", "Settings")</li>
+                        <li><a href="#">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

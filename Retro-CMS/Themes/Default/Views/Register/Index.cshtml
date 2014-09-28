@@ -1,0 +1,145 @@
+﻿@using Default.Functionality.Extensions
+@model Default.Models.Register.StepOneModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Habblow - Step 1</title>
+    <link href="@Url.Content("~/Themes/Default/Content/Stylesheets/bootstrap-water-min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Themes/Default/Content/Stylesheets/common.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Themes/Default/Content/Stylesheets/register.css")" rel="stylesheet" />
+</head>
+<body>
+    <div id="step1" class="oc-wrapper">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-offset-3 col-md-5">
+
+                    <div id="topProgress">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="step stepOne">Birthday & Gender</div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="step stepTwo disabled">Account Details</div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="step stepThree disabled">Security Check</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="middleContainer">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h1>Birthday & Gender</h1>
+
+                                <hr />
+
+                                @using (Html.BeginForm())
+                                {
+                                    if (!ViewData.ModelState.IsValid)
+                                    {
+                                        <div class="alert alert-danger alert-dismissable" role="alert">
+                                            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h4>Error!</h4>
+                                            @Html.ValidationSummary()
+                                        </div>
+                                    }
+                                    
+                                    @Html.BootstrapLabel("Please enter a valid birthday")
+                                    @Html.DropDownListFor(m => m.DayBirthday, Model.Days)
+                                    @Html.DropDownListFor(m => m.MonthBirthday, Model.Months)
+                                    @Html.DropDownListFor(m => m.YearBirthday, Model.Years)
+
+
+                                    <hr />
+
+                                       
+                                    @Html.BootstrapLabel("I am")
+                                        
+                                    <div id="gender">
+                                        <div class="row">
+                                            
+                                            <div id="boy" class="col-md-6 col-xs-6 text-center">
+                                                <div class="boy active"></div>
+                                                <div class="checkbox">
+                                                    <label>
+                                                        @Html.RadioButtonFor(m => m.Gender, "man", new {Checked="checked"})
+                                                        Male
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div id="girl" class="col-md-6 col-xs-6 text-center">
+                                                <div class="girl"></div>
+                                                <div class="checkbox">
+                                                    <label>
+                                                        @Html.RadioButtonFor(m => m.Gender, "female")
+                                                        Female
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                        
+                                    <hr class="dashed" />
+                                        
+                                    <div id="bottom" class="clearfix">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="pull-left">
+                                                    @Html.ActionLink("Go back", "Index", "Home")
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="pull-right">
+                                                    <input type="submit" value="Next" class="btn btn-default"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="@Url.Content("~/Themes/Default/Content/Javascripts/jquery.js")"></script>
+    
+    <script>
+        $(document).ready(function () {
+
+            function genderChange(element) {
+                if ($(element).val() == "man") {
+                    $('#middleContainer .girl').removeClass('active');
+                    $('#middleContainer .boy').addClass('active');
+                    $("#middleContainer #girl input[name=Gender]").prop('checked', false);
+                    $("#middleContainer #boy input[name=Gender]").prop('checked', true);
+                } else {
+                    $('#middleContainer .boy').removeClass('active');
+                    $('#middleContainer .girl').addClass('active');
+                    $("#middleContainer #boy input[name=Gender]").prop('checked', false);
+                    $("#middleContainer #girl input[name=Gender]").prop('checked', true);
+                }
+            }
+
+            $('input[name=Gender]:radio').change(function () {
+                genderChange($(this));
+            });
+
+            $('#middleContainer .boy, #middleContainer .girl').click(function () {
+                genderChange($(this).parent().find('#Gender'));
+            });
+        });
+    </script>
+</body>
+</html>
+

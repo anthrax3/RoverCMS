@@ -1,0 +1,150 @@
+﻿body {
+    color: #fff;
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 1.644;
+    background: black url(../Images/Register/registration_step1.png) no-repeat right 130px;
+}
+
+@media (max-width: 992px ) {
+    body {
+        margin-top: 0px;
+        background-image: none;
+    }
+}
+
+/* Forms */
+
+.control-label {
+    color: #22b9f1;
+    font-size: 12px;
+    font-weight: bold;
+    padding-bottom: 6px;
+}
+
+/* Main */
+#middleContainer {
+    margin-top: 60px;
+}
+
+    #middleContainer small {
+        color: #7d7d7d;
+        font-size: 11px;
+    }
+
+@media (max-width: 992px ) {
+    #middleContainer {
+        margin-top: 0px;
+    }
+}
+
+#middleContainer h1 {
+    font-size: 22px;
+}
+
+#middleContainer hr {
+    border-top: 1px solid #808080;
+    border-bottom: 1px solid #3d3d3d;
+}
+
+    #middleContainer hr.dashed {
+        border-top: 1px dashed #808080;
+        border-bottom: 1px dashed #3d3d3d;
+    }
+
+#middleContainer a, #middleContainer .btn.btn-link {
+    color: #fff;
+    text-decoration: underline;
+    border: 0;
+    -webkit-box-shadow: none;
+    -ms-box-shadow: none;
+    box-shadow: none;
+    padding: 0px;
+}
+
+#middleContainer select {
+    background-color: #ddd;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 5px;
+    border: 0;
+    height: 30px;
+    width: 32.6%;
+    margin-left: 1%;
+    color: #000;
+}
+
+    #middleContainer select:first-of-type {
+        margin-left: 0px;
+    }
+
+
+/* Step 1 */
+
+#step1 #middleContainer #gender .row .col-md-6 > div {
+    height: 168px;
+    width: 60px;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+#step1 #middleContainer #gender .row .col-md-6 .checkbox {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    height: auto;
+}
+
+    #step1 #middleContainer #gender .row .col-md-6 .checkbox input[type="radio"] {
+        position: relative;
+        top: 2px;
+    }
+
+#step1 #middleContainer #gender .boy {
+    background-image: url('../Images/Register/silhouette_boy.png');
+    cursor: pointer;
+}
+
+#step1 #middleContainer #gender .girl {
+    background-image: url('../Images/Register/silhouette_girl.png');
+    cursor: pointer;
+}
+
+#step1 #middleContainer #gender .boy:hover, #step1 #middleContainer #gender .boy.active {
+    background-image: url('../Images/Register/chosen_boy.png');
+}
+
+#step1 #middleContainer #gender .girl:hover, #step1 #middleContainer #gender .girl.active {
+    background-image: url('../Images/Register/chosen_girl.png');
+}
+
+
+/* Step 2 */
+#step2 {
+    background: #000 url("../Images/Register/registration_step2.png") no-repeat right 130px;
+}
+/* Progress */
+
+.step {
+    height: 21px;
+    padding: 0px 0px 0px 30px;
+    display: inline-block;
+    background-repeat: no-repeat;
+}
+
+.disabled {
+    opacity: 0.5;
+    color: #fff;
+}
+
+.stepOne {
+    background-image: url("../Images/Register/step_1_white.png");
+}
+
+.stepTwo {
+    background-image: url("../Images/Register/step_2_white.png");
+}
+
+.stepThree {
+    background-image: url("../Images/Register/step_3_white.png");
+}

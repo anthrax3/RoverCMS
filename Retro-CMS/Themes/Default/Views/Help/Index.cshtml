@@ -1,0 +1,116 @@
+﻿@model Default.Models.Help.BundleHelpModel
+
+<div id="helpSystem" class="row">
+    <div class="col-md-12">
+
+        <!-- Search -->
+        <div id="search" class="box">
+            <div class="innerBox">
+                <div class="head lightblue">
+                    <p class="noMargin">Search</p>
+                </div>
+                <div class="body clearfix">
+                    @using (Html.BeginForm())
+                    {
+                        <div class="row">
+                            <div class="col-md-10">
+                                @Html.TextBoxFor(m => m.SearchModel.Search, new { @class = "form-control" })
+                            </div>
+                            <div class="col-md-2">
+                                <input type="submit" value="Search" class="btn btn-primary btn-block" />
+                            </div>
+                        </div>
+                    }
+
+                    <div id="articles">
+                        <ul>
+                            <li>
+                                @Html.ActionLink("Praesent ex elit, semper quis diam a, laoreet molestie dui", "Article", "Help")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Maecenas a sollicitudin quam. Vestibulum eget tincidunt erat, sit a", "Article", "Help")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Mauris iaculis sem quis diam", "Article", "Help")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Integer ultricies ante tortor,", "Article", "Help")
+                            </li>
+                        </ul>
+
+                        @Html.ActionLink("Load more »", "More", "Help", new { @class = "btn btn-default btn-sm btn-block", @id = "loadMore" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="faq" class="box nextBlock">
+            <div class="innerBox">
+                <div class="head lightblue">
+                    <p class="noMargin">FAQ</p>
+                </div>
+                <div class="body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul>
+                                <li>
+                                    <p class="title">Category1 <span class="amount">(3)</span> @Html.ActionLink("»", "Article", "Help")</p>
+
+                                    <ul>
+                                        <li>@Html.ActionLink("Mauris iaculis sem quis diam pulvina »", "Article", "Help")</li>
+                                        <li>@Html.ActionLink("Mauris iaculis sem quis diam pulvina »", "Article", "Help")</li>
+                                        <li>@Html.ActionLink("Mauris iaculis sem quis diam pulvina »", "Article", "Help")</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul>
+                                <li>
+                                    <p class="title">Category2 <span class="amount">(3)</span> @Html.ActionLink("»", "Article", "Help")</p>
+
+                                    <ul>
+                                        <li>@Html.ActionLink("Mauris iaculis sem quis diam pulvina »", "Article", "Help")</li>
+                                        <li>@Html.ActionLink("Mauris iaculis sem quis diam pulvina »", "Article", "Help")</li>
+                                        <li>@Html.ActionLink("Mauris iaculis sem quis diam pulvina »", "Article", "Help")</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul>
+                                <li>
+                                    <p class="title">Category3 <span class="amount">(3)</span> @Html.ActionLink("»", "Article", "Help")</p>
+
+                                    <ul>
+                                        <li>@Html.ActionLink("Mauris iaculis sem quis diam pulvina »", "Article", "Help")</li>
+                                        <li>@Html.ActionLink("Mauris iaculis sem quis diam pulvina »", "Article", "Help")</li>
+                                        <li>@Html.ActionLink("Mauris iaculis sem quis diam pulvina »", "Article", "Help")</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                         <div class="col-md-6">
+                            <ul>
+                                <li>
+                                    <p class="title">Category4 <span class="amount">(3)</span> @Html.ActionLink("»", "Article", "Help")</p>
+
+                                    <ul>
+                                        <li>@Html.ActionLink("Mauris iaculis sem quis diam pulvina »", "Article", "Help")</li>
+                                        <li>@Html.ActionLink("Mauris iaculis sem quis diam pulvina »", "Article", "Help")</li>
+                                        <li>@Html.ActionLink("Mauris iaculis sem quis diam pulvina »", "Article", "Help")</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Stylesheets{
+    <link href="@Url.Content("/Themes/Default/Content/Stylesheets/Help.css")" rel="stylesheet" />
+}

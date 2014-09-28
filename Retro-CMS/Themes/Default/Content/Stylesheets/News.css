@@ -1,0 +1,131 @@
+﻿#newsSystem #articles li a {
+    text-decoration: underline;
+}
+
+#newsSystem #articles ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#newsSystem #articles a {
+    color: #1EA7D2;
+}
+
+#newsSystem #articles li {
+    border-bottom: 1px dashed #d3d3d3;
+    padding-bottom: 5px;
+    margin-top: 5px;
+}
+
+    #newsSystem #articles li:last-of-type {
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+
+    #newsSystem #articles li:first-of-type {
+        margin-top: 0;
+    }
+
+    #newsSystem #articles li.active a {
+        color: #000;
+        text-decoration: none;
+    }
+
+#newsSystem #articles #moreNews {
+    margin: 10px 0px 0px 10px;
+    display: block;
+}
+
+#newsSystem #newsArticle #smallDetails {
+    font-size: 11px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+    #newsSystem #newsArticle #smallDetails .date {
+        color: #949494;
+    }
+
+    #newsSystem #newsArticle #smallDetails .tags {
+        color: #1EA7D2;
+        text-decoration: underline;
+    }
+
+#newsSystem #newsArticle #article {
+    margin-top: 10px;
+}
+
+#newsSystem #writeComment label {
+    display: block;
+}
+
+#newsSystem #writeComment textarea {
+    height: 100px;
+    max-height: 250px;
+}
+
+#newsSystem #writeComment {
+    background-color: #F0F0F0;
+}
+
+#newsSystem #comments ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#newsSystem #comments li .avatar {
+    margin-right: 10px;
+}
+
+    #newsSystem #comments li .avatar img {
+        float: left;
+    }
+
+#newsSystem #comments li .info {
+    float: left;
+}
+
+    #newsSystem #comments li .info .userInfo {
+        padding-bottom: 5px;
+        border-bottom: 1px dashed #d3d3d3;
+    }
+
+        #newsSystem #comments li .info .userInfo .username {
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+
+        #newsSystem #comments li .info .userInfo .motto {
+            color: #ACACAC;
+            margin-bottom: 0;
+            font-size: 11px;
+        }
+
+#newsSystem #comments li .comment {
+    margin-top: 10px;
+}
+
+#newsSystem #comments li .postedDate {
+    margin-top: 5px;
+    font-style: italic;
+    color: #949494;
+    text-align: right;
+    font-size: 11px;
+}
+
+#newsSystem #comments li:first-of-type {
+    margin-top: 0;
+}
+
+#newsSystem #comments li:last-of-type {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+#newsSystem #comments li {
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #D6D6D6;
+}

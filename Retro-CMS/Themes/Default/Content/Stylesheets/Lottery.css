@@ -1,0 +1,93 @@
+﻿#lotterySystem #vault .body {
+    background-image: url(../Images/Lottery/vaultbg.png);
+    height: 382px;
+    width: auto;
+    position: relative;
+}
+
+#lotterySystem #vault #content {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+}
+
+#lotterySystem #vault #content p {
+    font-family: Volter;
+    font-size: 12px;
+    text-shadow: 1px 1px #fff;
+}
+
+#lotterySystem #vault #codes select {
+    display: inline-block;
+    width: auto;
+}
+
+#lotterySystem #info img {
+    margin-right: 15px;
+}
+
+#lotterySystem #myAccount ul {
+    margin: 0;
+    padding: 0;
+}
+
+#lotterySystem #myAccount li .name {
+    float: left;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#lotterySystem #myAccount li .name img {
+    margin-right: 5px;
+}
+
+#lotterySystem #myAccount li .name span, #lotterySystem #myAccount li .value span {
+    position: relative;
+    top: 2px;
+}
+
+#lotterySystem #myAccount li:first-of-type {
+    margin-top: 0;
+}
+
+#lotterySystem #myAccount li:last-of-type {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+#lotterySystem #myAccount li {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d3d3d3;
+    list-style: none;
+    margin-top: 10px;
+}
+
+#lotterySystem #myAccount li .value {
+    float: left;
+}
+
+#lotterySystem #showRoom ul {
+    list-style: none;
+}
+#lotterySystem #showRoom li {
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d3d3d3;
+}
+#lotterySystem #showRoom li:first-of-type {
+    margin-top: 0;
+}
+#lotterySystem #showRoom li img {
+    margin-right: 10px;
+}
+#lotterySystem #showRoom li  .title {
+    font-weight: bold;
+}
+#lotterySystem #showRoom li .description {
+    margin-top: 2px;
+}
+
+#lotterySystem #showRoom li:last-of-type {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
